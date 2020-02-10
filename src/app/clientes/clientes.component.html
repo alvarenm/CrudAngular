@@ -1,0 +1,37 @@
+<h2>Nosso Clientes</h2>
+
+<ul class="clientes">
+  <li *ngFor="let clienteAtual of clientes">
+  <a routerLink="/detalhes/{{clienteAtual.id}}">
+    [<span class="badge" >{{clienteAtual.nome}}   </span>][<span>{{clienteAtual.data}}</span>][<span>{{clienteAtual.email}}</span>][<span>{{clienteAtual.endereco}}</span>]
+    </a>
+    <button class = "deletar" title="Deletar um cliente"
+    (click)="deletar(clienteAtual)">DELETAR</button>
+  </li>
+</ul>
+  <div>
+    <label>Nome do Cliente:
+      <input #clienteNome/>
+    </label>
+    <br>
+    <label>data de nasicmento:
+      <input #clienteData/>
+    </label>
+    <br>
+    <label>Email:
+      <input #clienteEmail/>
+    </label>
+    <br>
+    <label>Endereço:
+      <input #clienteEndereco/>
+    </label>
+    <button (click)="adicionar(clienteNome.value,
+    clienteData.value,
+    clienteEmail.value,
+    clienteEndereco.value)">
+    Adicionar  
+  </button>
+    <br>
+
+
+

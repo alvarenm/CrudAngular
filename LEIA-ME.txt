@@ -1,0 +1,1 @@
+Para executar o programa basta baixar a pasta testePratico, e inicializar o servidor local utilizando o comando ng serve.
